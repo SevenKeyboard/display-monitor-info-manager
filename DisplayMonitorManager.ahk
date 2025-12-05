@@ -2,18 +2,18 @@
 #Include %A_ScriptDir%
 #Include .\lib\MonitorInfoExStruct.ahk
 ;==============================================================
-; DisplayMonitorManager — Enumeration & info retrieval for monitors
+; DisplayMonitorInfoManager — Monitor enumeration & cached display info manager
 ;
-; GitHub: https://github.com/SevenKeyboard/display-monitor-manager
+; GitHub: https://github.com/SevenKeyboard/display-monitor-info-manager
 ; Author: SevenKeyboard Ltd. (2025)
 ; License: MIT License
 ;==============================================================
-class DisplayMonitorManager
+class DisplayMonitorInfoManager
 {
     static _ := DisplayMonitorManager._init()
     _init()    {
         global
-        DISPLAYMONITORMANAGER_VERSION := "1.0.0"
+        DISPLAYMONITORINFOMANAGER_VERSION := "1.0.0"
     }
     static _isInitialized:=false
     IsInitialized    {
