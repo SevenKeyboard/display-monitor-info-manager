@@ -8,13 +8,16 @@
 ; Author: SevenKeyboard Ltd. (2025)
 ; License: MIT License
 ;==============================================================
-class DisplayMonitorInfoManager
+class VersionManager_DisplayMonitorInfoManager
 {
-    static _ := DisplayMonitorInfoManager._init()
+    static _ := VersionManager_DisplayMonitorInfoManager._init()
     _init()    {
         global
         DISPLAYMONITORINFOMANAGER_VERSION := "1.0.0"
     }
+}
+class DisplayMonitorInfoManager
+{
     static _isInitialized:=false
     IsInitialized    {
         get  {
