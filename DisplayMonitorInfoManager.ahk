@@ -14,6 +14,18 @@ class VersionManager_DisplayMonitorInfoManager
     _init()    {
         global
         DISPLAYMONITORINFOMANAGER_VERSION := "1.0.0"
+        if (!this._verCheck(MONITORINFOEXSTRUCT_VERSION, "2.0.0"))
+            throw exception("MonitorInfoExStruct version 2.x is required (minimum 2.0.0).")
+        return true
+    }
+    _verCheck(byRef actual, required)    {
+        if !isSet(actual)
+            return false
+        actualMajor     := strSplit(actual, ".",, 2)[1]
+        requiredMajor   := strSplit(required, ".",, 2)[1]
+        if (actualMajor !== requiredMajor)
+            return false
+        return verCompare(actual, ">=" required)
     }
 }
 class DisplayMonitorInfoManager
